@@ -1,0 +1,28 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title %}
+    CMS管理系统
+{% endblock %}
+
+{% block head %}
+    <style>
+        .home-front-page{
+            margin: 10px;
+        }
+        iframe{
+            margin: 0 auto;
+        }
+    </style>
+{% endblock %}
+
+{% block page_title %}
+    前台页面预览
+{% endblock %}
+
+{% block main_content %}
+    <div class="home-front-page">
+        <iframe src="{{ url_for('front.index') }}" width="100%" height="720px" scrolling="auto" marginwidth="0" marginheight="0"
+            vspace=-170 hspace=0 align="middle" name="main" frameborder="0" >
+        </iframe>
+    </div>
+{% endblock %}

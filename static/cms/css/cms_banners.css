@@ -1,0 +1,28 @@
+.top-box button{
+    float: right;
+}
+
+table{
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.content-hide{
+    -o-text-overflow:ellipsis;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width:100%;
+}
+
+.cms-banner{
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.index-banner{
+    border-radius: 10px;
+    overflow: hidden;
+}

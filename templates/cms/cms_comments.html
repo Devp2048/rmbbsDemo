@@ -1,0 +1,51 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title %}
+    评论管理
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ static("cms/css/cms_comments.css") }}">
+    <script src="{{ static("cms/js/cms_comments.js") }}"></script>
+{% endblock %}
+
+{% block page_title %}
+    {{ self.title() }}
+{% endblock %}
+
+{% block main_content %}
+    <table class="table table-bordered table-hover table-condensed" width="100%">
+        <thead>
+            <tr>
+                <th width="5%">#</th>
+                <th width="25%">评论内容</th>
+                <th width="10%">发布者</th>
+                <th width="20%">所属帖子</th>
+                <th width="15%">所属板块</th>
+                <th width="15%">发表时间</th>
+                <th width="10%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comment in comments %}
+                <tr align="center" data-id="{{ comment.id }}">
+                    <td class="content-hide">{{ comments.index(comment) + 1 }}</td>
+                    <td class="content-hide" title="{{ comment.content }}">
+                        <a href="{{ url_for('front.post_detail', post_id=comment.post.id) }}#cm_{{ comment.id }}" target="_blank">{{ comment.content }}</a>
+                    </td>
+                    <td class="content-hide">{{ comment.user.username }}</td>
+                    <td class="content-hide" title="{{ comment.post.title }}">
+                        <a href="{{ url_for('front.post_detail', post_id=comment.post.id) }}" target="_blank">{{ comment.post.title }}</a>
+                    </td>
+                    <td class="content-hide">{{ comment.post.board.name }}</td>
+                    <td class="content-hide">{{ comment.create_time }}</td>
+                    <td class="content-hide">
+                        <button class="btn btn-default btn-xs edit-comment-btn">编辑</button>
+                        <button class="btn btn-danger btn-xs delete-comment-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

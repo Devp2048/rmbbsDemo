@@ -1,0 +1,79 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title %}
+    前台用户管理
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ static("cms/css/cms_fusers.css") }}">
+{% endblock %}
+
+{% block page_title %}
+    {{ self.title() }}
+{% endblock %}
+
+{% block main_content %}
+    <table class="table table-bordered table-hover table-condensed" width="100%">
+        <thead>
+            <tr>
+                <th width="5%">#</th>
+                <th width="9%">用户名</th>
+                <th width="12%">手机号</th>
+                <th width="15%">email</th>
+                <th width="5%">性别</th>
+                <th width="7%">真名</th>
+                <th width="15%">签名</th>
+                <th width="12%">加入时间</th>
+                <th width="5%">帖子数</th>
+                <th width="5%">评论数</th>
+                <th width="10%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fuser in fusers %}
+                <tr align="center" data-id="{{ fuser.id }}">
+                    <td class="content-hide">{{ fusers.index(fuser) + 1 }}</td>
+                    <td class="content-hide">{{ fuser.username }}</td>
+                    <td class="content-hide">{{ fuser.telephone }}</td>
+                    {% if fuser.email %}
+                        <td class="content-hide">{{ fuser.email }}</td>
+                    {% else %}
+                        <td class="content-hide">无</td>
+                    {% endif %}
+                    {% if fuser.gender == GenderEnum.MALE %}
+                        <td class="content-hide">男</td>
+                    {% elif fuser.gender == GenderEnum.FEMALE %}
+                        <td class="content-hide">女</td>
+                    {% elif fuser.gender == GenderEnum.SECRET %}
+                        <td class="content-hide">保密</td>
+                    {% else %}
+                        <td class="content-hide">无</td>
+                    {% endif %}
+                    {% if fuser.realname %}
+                        <td class="content-hide">{{ fuser.realname }}</td>
+                    {% else %}
+                        <td class="content-hide">无</td>
+                    {% endif %}
+                    {% if fuser.signature %}
+                        <td class="content-hide" title="{{ fuser.signature }}">{{ fuser.signature }}</td>
+                    {% else %}
+                        <td class="content-hide">无</td>
+                    {% endif %}
+                    <td class="content-hide">{{ fuser.join_time }}</td>
+                    {% if fuser.posts|length == 0 %}
+                        <td class="content-hide">0</td>
+                    {% else %}
+                        <td class="content-hide">
+                            {{ fuser.posts }}
+                        </td>
+                    {% endif %}
+                    <td class="content-hide">{{ fuser.comments|length }}</td>
+                    <td class="content-hide">
+                        <button class="btn btn-default btn-xs edit-fuser-btn">编辑</button>
+                        <button class="btn btn-danger btn-xs delete-fuser-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

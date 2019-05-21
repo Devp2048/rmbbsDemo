@@ -1,0 +1,40 @@
+body{
+    background: #f0f0f0;
+}
+.outer-box{
+    width: 100%;
+    height: 908px;
+    margin: 0 auto;
+    background: url("../images/rmbackground.jpg") no-repeat center 100%;
+    overflow: hidden;
+}
+.logo-box {
+    text-align: center;
+    padding-top: 160px;
+}
+.logo-box img{
+    width: 100px;
+    height: 100px;
+    visibility: hidden;
+}
+.page-title{
+    text-align: center;
+    color: #ffffff;
+}
+.form-box{
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.captcha-addon{
+    padding: 0;
+    overflow: hidden;
+}
+.captcha-img{
+    width: 96px;
+    height: 32px;
+}
+
+.resetpwd-link{
+    float: right;
+}

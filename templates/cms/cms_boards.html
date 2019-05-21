@@ -1,0 +1,80 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block title %}
+    板块管理
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ static("cms/css/cms_boards.css") }}">
+    <script src="{{ static("cms/js/cms_boards.js") }}"></script>
+{% endblock %}
+
+{% block page_title %}
+    {{ self.title() }}
+{% endblock %}
+
+{% block main_content %}
+    <div class="top-box">
+        <button id="add-board" type="button" class="btn btn-warning" data-toggle="modal" data-target="#board-Modal">
+            添加新版块
+        </button>
+    </div>
+{#板块表格#}
+    <table class="table table-bordered table-hover" width="100%">
+        <thead>
+            <tr>
+                <th width="5%">#</th>
+                <th width="30%">版块名称</th>
+                <th width="15%">帖子数量</th>
+                <th width="15%">评论数量</th>
+                <th width="20%">创建时间</th>
+                <th width="15%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for board in boards %}
+                <tr align="center" data-id="{{ board.id }}" data-name="{{ board.name }}">
+                    <td class="content-hide">{{ boards.index(board) + 1 }}</td>
+                    <td class="content-hide" title="{{ board.name }}">{{ board.name }}</td>
+                    <td class="content-hide">{{ board.posts|length }}</td>
+                    {% if board.id in board_comment_num %}
+                        <td class="content-hide">{{ board_comment_num[board.id] }}</td>
+                    {% else %}
+                        <td class="content-hide">0</td>
+                    {% endif %}
+                    <td class="content-hide">{{ board.create_time }}</td>
+                    <td class="content-hide">
+                        <button class="btn btn-default btn-xs edit-board-btn">编辑</button>
+                        <button class="btn btn-danger btn-xs delete-board-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="board-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">添加板块</h4>
+          </div>
+          <div class="modal-body">
+              <form class="form-horizontal">
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">名称:</label>
+                      <div class="col-sm-9">
+                          <input type="text" class="form-control" name="name" placeholder="请输入板块名称">
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" id="save-board-btn" class="btn btn-primary">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

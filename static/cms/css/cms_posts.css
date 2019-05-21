@@ -1,0 +1,14 @@
+
+table{
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.content-hide{
+    -o-text-overflow:ellipsis;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width:100%;
+}
