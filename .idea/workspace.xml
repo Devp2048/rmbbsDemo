@@ -55,7 +55,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rmbbsDemo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -91,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/front/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="143">
@@ -250,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="129" />
     <option name="y" value="15" />
     <option name="width" value="1696" />
@@ -522,7 +522,7 @@
       <workItem from="1557918552490" duration="14301000" />
       <workItem from="1558319891849" duration="7540000" />
       <workItem from="1558342541999" duration="28000" />
-      <workItem from="1558348429394" duration="2243000" />
+      <workItem from="1558348429394" duration="2842000" />
     </task>
     <task id="LOCAL-00001" summary="rmbbsDemo">
       <created>1558421997127</created>
@@ -535,7 +535,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="689098000" />
+    <option name="totallyTimeSpent" value="689697000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -547,9 +547,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="129" y="15" width="1696" height="1026" extended-state="0" />
+    <frame x="129" y="15" width="1696" height="1026" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49736843" visible="true" weight="0.15709047" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49736843" visible="true" weight="0.15709047" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.16204691" />
       <window_info id="Favorites" order="2" sideWeight="0.50080514" side_tool="true" weight="0.16204691" />
       <window_info anchor="bottom" id="REST Client" order="0" show_stripe_button="false" weight="0.42937854" />
@@ -572,7 +573,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="SciView" order="3" weight="0.32889125" />
       <window_info anchor="right" x="1073" y="346" width="307" height="619" id="Database" order="4" sideWeight="0.44047618" visible="true" weight="0.33251834" />
-      <window_info active="true" anchor="right" id="Terminal" order="5" sideWeight="0.5595238" side_tool="true" visible="true" weight="0.33251834" />
+      <window_info anchor="right" id="Terminal" order="5" sideWeight="0.5595238" side_tool="true" visible="true" weight="0.33251834" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49736843" visible="true" weight="0.1684435" />
@@ -885,16 +886,6 @@
         <state relative-caret-position="-505" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rmbbsDemo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="946">
@@ -965,6 +956,16 @@
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
             <element signature="e#0#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rmbbsDemo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
